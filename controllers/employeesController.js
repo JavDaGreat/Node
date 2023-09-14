@@ -1,6 +1,6 @@
 const data ={
   employees:require("../model/employees.json"),
-  setEmployees: function (data){this.employee =data}
+  setEmployees: function (data){this.employees =data}
 
 }
 
@@ -20,6 +20,7 @@ const createNewEmployee=(req,res)=>{
     return res.status(400).json({"message":"first and last name required"})
   }
   data.setEmployees([...data.employees,newEmployee])
+  console.log(newEmployee);
   res.status(201).json(data.employees)
   
   

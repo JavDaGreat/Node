@@ -4,7 +4,7 @@ const employeeController= require("../../controllers/employeesController")
 
 
 router.route("/")
-.get(employeeController.getAllEmployees)
+.get( employeeController.getAllEmployees)
 .post(employeeController.createNewEmployee)
 .put(employeeController.updateEmployee)
 .delete(employeeController.deleteEmployee)

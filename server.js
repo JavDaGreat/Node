@@ -5,16 +5,23 @@ const cors = require("cors")
 const {logger}=require("./middleware/logEvenets")
 const errHandler=require("./middleware/errorHandler")
 const corsOptions=require("./config/corsOption")
+const verifyJWT = require("./middleware/verifyJWT")
+const cookieParser = require("cookie-parser")
+const credential = require("./middleware/credentials")
+
 
 const PORT= process.env.PORT || 3500;
 
 app.use(logger)
+
+app.use(credential)
 
 app.use(cors(corsOptions))
 
 app.use(express.urlencoded({extended:false}))
 
 app.use(express.json())
+app.use(cookieParser())
 
 app.use(express.static(path.join(__dirname,"public")))
 
@@ -23,10 +30,14 @@ app.use("/subdir",express.static(path.join(__dirname,"public")))
 app.use("/",require("./routes/root"))
 
 app.use("/register",require("./routes/register"))
+
 app.use("/auth",require("./routes/auth"))
 
+app.use("/refresh",require("./routes/refresh"))
+app.use("/logout",require("./routes/logout"))
 
 
+app.use(verifyJWT)
 
 app.use("/subdir",require("./routes/subdir"))
 

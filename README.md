@@ -2,3 +2,5 @@
 * middleware
 * routing
 * MRC REST API
+* JWT Token/ Auth
+* Cookies

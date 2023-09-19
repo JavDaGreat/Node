@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const express =require("express")
 const app =express()
 const path= require("path")
@@ -8,9 +10,13 @@ const corsOptions=require("./config/corsOption")
 const verifyJWT = require("./middleware/verifyJWT")
 const cookieParser = require("cookie-parser")
 const credential = require("./middleware/credentials")
+const mongoose = require("mongoose")
+const connectDB =require("./config/dbConn")
 
 
 const PORT= process.env.PORT || 3500;
+
+connectDB()
 
 app.use(logger)
 
@@ -69,5 +75,8 @@ app.all("*",(req,res)=>{
 
 
 app.use(errHandler)
+mongoose.connection.once("open",()=>{
+  console.log("connected to mango");
+  app.listen(PORT,()=>console.log(`server is running on port ${PORT}`))
+})
 
-app.listen(PORT,()=>console.log(`server is running on port ${PORT}`))

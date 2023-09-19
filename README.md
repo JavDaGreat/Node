@@ -1,6 +1,8 @@
 ## learning Node /Express
-* middleware
-* routing
+* Middleware
+* Routing
 * MRC REST API
 * JWT Token/ Auth
 * Cookies
+* Basic Authentication / Authorization
+* Basic Mango DB and Mangoose Js

@@ -1,3 +1,4 @@
 20230913	16:26:29	35107ff3-a143-43b3-8ce1-4ad315e5b5de	Error:Not allowed by CORS
 20230913	16:32:31	5076966c-ce2b-4b85-9e6d-ccaa0a722980	SyntaxError:Unexpected end of JSON input
 20230913	17:08:00	706daae8-ce95-4065-bd7e-b0588747bbee	SyntaxError:Unexpected end of JSON input
+20230919	12:18:38	4393e477-359e-4be9-98c1-46c975bf048f	SyntaxError:Unexpected token c in JSON at position 12

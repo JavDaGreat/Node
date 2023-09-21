@@ -187,3 +187,6 @@
 20230919	12:19:29	7abb8c40-19e3-4b50-a850-4b893ece64c8	PUT	undefined	/employees
 20230919	12:20:36	d39cd313-2507-48ed-a88b-8647d26744ee	POST	undefined	/auth
 20230919	12:20:50	92b9eaf8-8334-4180-9a38-e2517eb72313	DELETE	undefined	/employees
+20230921	11:37:47	0775246e-429b-4ae8-b91d-0ba09696e309	POST	undefined	/register
+20230921	11:38:07	9c9c55d2-249c-4eab-a814-3dee905ed847	POST	undefined	/auth
+20230921	11:38:36	80da2f7b-d685-4732-bc20-b098672b034c	GET	undefined	/employees/
